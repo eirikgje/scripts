@@ -1,0 +1,31 @@
+#!/bin/bash
+
+mpirun -n 16 -machinefile machinefile_owl7.txt ~/src/quiet/quiet_svn/oslo/src/f90/scalapost/scalapost invert LU covmat_nside16_70GHz_DX9delta_SS1_SS1withplanckprelpolmask_QUonly.unf covmat_nside16_70GHz_DX9delta_SS1_SS1withplanckprelpolmask_QUonly_inv.unf
+
+mpirun -n 16 -machinefile machinefile_owl7.txt ~/src/quiet/quiet_svn/oslo/src/f90/scalapost/scalapost invert LU covmat_nside16_70GHz_DX9delta_SS2_SS2withplanckprelpolmask_QUonly.unf covmat_nside16_70GHz_DX9delta_SS2_SS2withplanckprelpolmask_QUonly_inv.unf
+
+mpirun -n 16 -machinefile machinefile_owl7.txt ~/src/quiet/quiet_svn/oslo/src/f90/scalapost/scalapost invert LU covmat_nside16_70GHz_DX9delta_SS3_SS3withplanckprelpolmask_QUonly.unf covmat_nside16_70GHz_DX9delta_SS3_SS3withplanckprelpolmask_QUonly_inv.unf
+
+mpirun -n 16 -machinefile machinefile_owl7.txt ~/src/quiet/quiet_svn/oslo/src/f90/scalapost/scalapost invert LU covmat_nside16_70GHz_DX9delta_SS4_SS4withplanckprelpolmask_QUonly.unf covmat_nside16_70GHz_DX9delta_SS4_SS4withplanckprelpolmask_QUonly_inv.unf
+
+mpirun -n 16 -machinefile machinefile_owl7.txt ~/src/quiet/quiet_svn/oslo/src/f90/scalapost/scalapost invert LU covmat_nside16_70GHz_DX9delta_SS5_SS5withplanckprelpolmask_QUonly.unf covmat_nside16_70GHz_DX9delta_SS5_SS5withplanckprelpolmask_QUonly_inv.unf
+
+mpirun -n 16 -machinefile machinefile_owl7.txt ~/src/quiet/quiet_svn/oslo/src/f90/scalapost/scalapost sqrt covmat_nside16_70GHz_DX9delta_SS1_SS1withplanckprelpolmask_QUonly_inv.unf outmat
+
+mv outmat_sqrt_inv_N.unf covmat_nside16_70GHz_DX9delta_SS1_SS1withplanckprelpolmask_QUonly_inv_sqrt.unf
+
+mpirun -n 16 -machinefile machinefile_owl7.txt ~/src/quiet/quiet_svn/oslo/src/f90/scalapost/scalapost sqrt covmat_nside16_70GHz_DX9delta_SS2_SS2withplanckprelpolmask_QUonly_inv.unf outmat
+
+mv outmat_sqrt_inv_N.unf covmat_nside16_70GHz_DX9delta_SS2_SS2withplanckprelpolmask_QUonly_inv_sqrt.unf
+
+mpirun -n 16 -machinefile machinefile_owl7.txt ~/src/quiet/quiet_svn/oslo/src/f90/scalapost/scalapost sqrt covmat_nside16_70GHz_DX9delta_SS3_SS3withplanckprelpolmask_QUonly_inv.unf outmat
+
+mv outmat_sqrt_inv_N.unf covmat_nside16_70GHz_DX9delta_SS3_SS3withplanckprelpolmask_QUonly_inv_sqrt.unf
+
+mpirun -n 16 -machinefile machinefile_owl7.txt ~/src/quiet/quiet_svn/oslo/src/f90/scalapost/scalapost sqrt covmat_nside16_70GHz_DX9delta_SS4_SS4withplanckprelpolmask_QUonly_inv.unf outmat
+
+mv outmat_sqrt_inv_N.unf covmat_nside16_70GHz_DX9delta_SS4_SS4withplanckprelpolmask_QUonly_inv_sqrt.unf
+
+mpirun -n 16 -machinefile machinefile_owl7.txt ~/src/quiet/quiet_svn/oslo/src/f90/scalapost/scalapost sqrt covmat_nside16_70GHz_DX9delta_SS5_SS5withplanckprelpolmask_QUonly_inv.unf outmat
+
+mv outmat_sqrt_inv_N.unf covmat_nside16_70GHz_DX9delta_SS5_SS5withplanckprelpolmask_QUonly_inv_sqrt.unf
